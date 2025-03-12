@@ -21,4 +21,4 @@ const fetchArtistBackground = async (artistLink) => {
     await browser.close();
 };
 
-fetchArtistBackground("https://open.spotify.com/artist/7b6Ui7JVaBDEfZB9k6nHL0");
+fetchArtistBackground("https://open.spotify.com/artist/1XgFuvRd7r5g0h844A5ZUQ");
