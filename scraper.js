@@ -9,6 +9,18 @@ const fetchArtistBackground = async (artistLink) => {
     });
 
     const element = await page.$('[data-testid="background-image"');
+    const leti = await page.$('mMx2LUixlnN_Fu45JpFB Ii9XdJaXIuKbmR1zC4Rt Yn2Ei5QZn19gria6LjZj');
+    let letii = [];
+
+    if(leti.length > 1){
+        for(i=0; i < leti.length; i++){
+            letii.push({i: leti[i].src});
+        };
+    } else {
+        letii = leti;
+    }
+
+    console.log(leti);
 
     if(element){
         const backgroundImageLink = await page.evaluate(el => el.style.backgroundImage.slice(5, -2), element);
