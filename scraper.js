@@ -20,8 +20,6 @@ const fetchArtistBackground = async (artistLink) => {
         letii = leti;
     }
 
-    console.log(leti);
-
     if(element){
         const backgroundImageLink = await page.evaluate(el => el.style.backgroundImage.slice(5, -2), element);
         console.log(backgroundImageLink);
